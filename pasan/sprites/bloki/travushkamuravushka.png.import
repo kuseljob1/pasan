@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blocktrava.png-72f14eecdb960879ea19592c5e92cb37.stex"
+path="res://.import/travushkamuravushka.png-a28f475c8a55c098ee9fbdf6984bc6fe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/blocktrava.png"
-dest_files=[ "res://.import/blocktrava.png-72f14eecdb960879ea19592c5e92cb37.stex" ]
+source_file="res://sprites/bloki/travushkamuravushka.png"
+dest_files=[ "res://.import/travushkamuravushka.png-a28f475c8a55c098ee9fbdf6984bc6fe.stex" ]
 
 [params]
 

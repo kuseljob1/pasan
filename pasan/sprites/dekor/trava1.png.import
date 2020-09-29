@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/backzadnik2.png-9372c000f8422cf5e928f3696f81a85f.stex"
+path="res://.import/trava1.png-9a3a55bdc6128a7268dd6e55f8f7475a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/backzadnik2.png"
-dest_files=[ "res://.import/backzadnik2.png-9372c000f8422cf5e928f3696f81a85f.stex" ]
+source_file="res://sprites/dekor/trava1.png"
+dest_files=[ "res://.import/trava1.png-9a3a55bdc6128a7268dd6e55f8f7475a.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

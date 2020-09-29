@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/trava2.png-0e80d458d20e44f741890d0e872ebf1e.stex"
+path="res://.import/trava2.png-cc4872aed2f6f5a6c5072bdf8b4efc0e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/trava2.png"
-dest_files=[ "res://.import/trava2.png-0e80d458d20e44f741890d0e872ebf1e.stex" ]
+source_file="res://sprites/dekor/trava2.png"
+dest_files=[ "res://.import/trava2.png-cc4872aed2f6f5a6c5072bdf8b4efc0e.stex" ]
 
 [params]
 
