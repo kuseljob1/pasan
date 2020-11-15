@@ -10,7 +10,7 @@ const grav = 9.80665
 
 var motion = Vector2.ZERO
 
-onready var sprite = $Sprite
+onready var sprite = $sprite
 onready var animationPlayer = $AnimationPlayer
 
 func _physics_process(delta):
