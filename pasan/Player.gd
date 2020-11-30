@@ -13,20 +13,23 @@ var motion = Vector2.ZERO
 onready var sprite = $sprite
 onready var animationPlayer = $AnimationPlayer
 
+
 func _physics_process(delta):
+	
+	
 	var x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	
 	if x_input != 0:
-		animationPlayer.play("beg(run kotorii)")
 		motion.x += x_input * ACCELERATION * delta
 		motion.x = clamp(motion.x, -MAX_SPEED, MAX_SPEED)
 		sprite.flip_h = x_input < 0 
+		animationPlayer.play("beg(run kotorii)")
 	else:
 		animationPlayer.play("stoit")
 	
 	motion.y += GRAVITY * delta
 	
-	if is_on_floor():
+	if test_move(transform, Vector2.ZERO):
 		if x_input == 0:
 			motion.x = lerp(motion.x, 0, FRICTION)
 			
@@ -39,5 +42,6 @@ func _physics_process(delta):
 
 		if x_input == 0:
 			motion.x = lerp(motion.x, 0, AIR_RESISTANCE)
+	
 	
 	motion = move_and_slide(motion, Vector2.UP)
