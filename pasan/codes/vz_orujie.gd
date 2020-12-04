@@ -1,19 +1,53 @@
 extends KinematicBody2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
+onready var player = get_node("../Player")
+var poloj = Vector2.ZERO
+var k = false
+var l = true
+var meow = true
+var z_input
+
+onready var sprite1 = $pistol1
+onready var sprite2 = $pistol1vruke
 
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
-	pass # Replace with function body.
+	pass 
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func v_ruke():
+	poloj.x = player.motion.x
+	poloj.y = player.motion.y
+	if player.x_input != 0:
+		sprite2.flip_h = player.x_input < 0
+
+	move_and_slide(poloj, Vector2.UP)
+
+	
+func _process(delta):
+	if l:
+		z_input = Input.get_action_strength("ui_accept")
+	
+	if k == true and z_input == 1:
+		l = false
+		z_input = 1
+		if meow:
+			remove_child(sprite1)
+			meow = false
+		v_ruke()
 
 
 func _on_PlayerDetector_body_entered(body):
-	queue_free()
+	k = true
+		
+
+
+
+# ∧＿∧
+#( ･ω･｡)つ━☆・*。
+#⊂　 ノ 　　　・゜+.            опля и оно работает!
+#しーＪ　　　°。+ *´¨)
+#　　　　　　　　　.· ´¸.·*´¨) ¸.·*¨)
+#　　　　　　　　　　(¸.·´ (¸.·'* ☆

@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const ACCELERATION = 512
-const MAX_SPEED = 128
+const MAX_SPEED = 96
 const FRICTION = 0.25
 const AIR_RESISTANCE = 0.02
 const GRAVITY = 200
@@ -9,6 +9,7 @@ const JUMP_FORCE = 128
 const grav = 9.80665
 
 var motion = Vector2.ZERO
+var x_input
 
 onready var sprite = $sprite
 onready var animationPlayer = $AnimationPlayer
@@ -17,7 +18,7 @@ onready var animationPlayer = $AnimationPlayer
 func _physics_process(delta):
 	
 	
-	var x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	
 	if x_input != 0:
 		motion.x += x_input * ACCELERATION * delta
@@ -29,7 +30,7 @@ func _physics_process(delta):
 	
 	motion.y += GRAVITY * delta
 	
-	if test_move(transform, Vector2.ZERO):
+	if test_move(transform, Vector2.UP):
 		if x_input == 0:
 			motion.x = lerp(motion.x, 0, FRICTION)
 			
