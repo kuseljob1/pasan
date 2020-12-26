@@ -30,7 +30,7 @@ func _physics_process(delta):
 	
 	motion.y += GRAVITY * delta
 	
-	if test_move(transform, Vector2.UP):
+	if test_move(transform, Vector2.DOWN):
 		if x_input == 0:
 			motion.x = lerp(motion.x, 0, FRICTION)
 			
